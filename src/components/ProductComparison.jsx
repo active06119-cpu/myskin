@@ -55,6 +55,18 @@ function ProductComparison({ skinType, onShowModal, onResetSurvey }) {
         </div>
       </div>
 
+      {/* 쿠팡 파트너스 안내 칸 (흰색 배경의 별도 박스) */}
+      <div className="mt-8 mb-10 flex justify-center">
+        <div 
+          className="w-full bg-white border border-gray-200 rounded-full shadow-sm px-6 py-3 flex items-center justify-center"
+          style={{ backgroundColor: '#ffffff' }}
+        >
+          <p className="text-center text-sm text-black leading-normal">
+            이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+          </p>
+        </div>
+      </div>
+
       {/* 선택된 카테고리의 제품 리스트 */}
       <div className="products-section-wrapper">
         <ProductList 
@@ -62,15 +74,6 @@ function ProductComparison({ skinType, onShowModal, onResetSurvey }) {
           skinType={skinType}
           key={selectedCategory} // 카테고리 변경 시 리렌더링을 위한 key
         />
-      </div>
-
-      {/* 쿠팡 파트너스 안내 문구 (제품 리스트 하단) */}
-      <div className="mt-8 mb-6 flex justify-center">
-        <div className="w-full bg-white border border-gray-100 rounded-full shadow-md px-8 py-3">
-          <p className="text-center text-xs md:text-sm text-black leading-relaxed">
-            이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
-          </p>
-        </div>
       </div>
 
       {/* 내 피부 다시 진단하기 버튼 */}
