@@ -57,14 +57,16 @@ function ProductComparison({ skinType, onShowModal, onResetSurvey }) {
 
       {/* 쿠팡 파트너스 강조 배너 */}
       <div className="my-4 flex justify-center">
-        <div className="w-full max-w-3xl bg-[#FF9000] text-white rounded-2xl shadow-md px-6 py-4">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xl">🚀</span>
-            <span className="text-lg font-bold">로켓배송 상품 보러가기</span>
+        <div className="w-full max-w-3xl bg-[#FF9000] text-white rounded-2xl shadow-xl px-6 py-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🚀</span>
+              <span className="text-xl font-bold">쿠팡 로켓배송으로 보러가기</span>
+            </div>
+            <p className="text-[11px] md:text-xs opacity-90 leading-relaxed">
+              이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+            </p>
           </div>
-          <p className="text-xs md:text-sm opacity-90 leading-relaxed">
-            이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
-          </p>
         </div>
       </div>
 
