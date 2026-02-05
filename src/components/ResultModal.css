@@ -1,0 +1,326 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 0;
+  font-weight: 700;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  color: #333;
+  background: #f0f0f0;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.skin-type-badge {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.skin-type-text {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* 피부 유형 특징 섹션 */
+.feature-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #667eea;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skin-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  padding: 20px;
+  background: #f8f9ff;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+/* 성분 정보 섹션 */
+.ingredients-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.ingredient-box {
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid;
+}
+
+.ingredient-box.recommended {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-color: #86efac;
+}
+
+.ingredient-box.avoid {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border-color: #fca5a5;
+}
+
+.ingredient-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.ingredient-icon {
+  font-size: 1.5rem;
+}
+
+.ingredient-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.ingredient-box.recommended .ingredient-title {
+  color: #166534;
+}
+
+.ingredient-box.avoid .ingredient-title {
+  color: #991b1b;
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ingredient-tag {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.recommended-tag {
+  background: #22c55e;
+  color: white;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.recommended-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.avoid-tag {
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.avoid-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* 관리 팁 섹션 */
+.tips-section {
+  background: #f8f9ff;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.tips-title {
+  font-size: 1.3rem;
+  color: #667eea;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tip-item {
+  padding: 12px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.tip-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.tip-item:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  background: #fafafa;
+}
+
+.confirm-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 100%;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-header {
+    padding: 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .skin-type-text {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .skin-description {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .ingredient-box {
+    padding: 15px;
+  }
+
+  .ingredient-title {
+    font-size: 1.1rem;
+  }
+
+  .ingredient-tag {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .tips-section {
+    padding: 20px;
+  }
+}
